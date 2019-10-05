@@ -7,4 +7,7 @@ public class HelloDto {
     @JsonProperty("name")
     public String name;
 
+    @JsonProperty("message")
+    public String message;
+
 }

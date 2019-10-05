@@ -30,6 +30,9 @@ public class HelloController {
         HelloModel result = this.helloService.sayHello(request.name);
         HelloDto helloDto = modelMapper.map(result, HelloDto.class);
 
+        helloDto.message = result.getMessage();
+        helloDto.name = request.name;
+
         return new ResponseEntity<HelloDto>(helloDto, HttpStatus.OK);
     }
 }
